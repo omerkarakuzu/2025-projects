@@ -107,8 +107,9 @@ export function TableOfContentsSlide() {
         {/* Alt Bilgi */}
         <div className="mt-12 pt-8 border-t border-border/30">
           <p className="text-lg text-muted-foreground">
-            Toplam <span className="font-semibold text-primary">16 proje</span>{" "}
-            • 4 ana kategori
+            Toplam{" "}
+            <span className="font-semibold text-primary">16 proje/çözüm</span> •
+            4 ana kategori
           </p>
         </div>
       </div>

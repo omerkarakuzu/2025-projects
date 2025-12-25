@@ -493,7 +493,6 @@ const projects = [
     ],
     stats: {
       duration: "Devam Ediyor",
-      team: "5 Kişi",
       impact: "Pilot Aşama",
     },
   },

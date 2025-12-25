@@ -1,4 +1,4 @@
-import { Heart, Sparkles, Users, Code, Coffee } from "lucide-react";
+import { Heart, Sparkles, Users, Code, Target } from "lucide-react";
 
 export function ThankYouSlide() {
   return (
@@ -72,12 +72,12 @@ export function ThankYouSlide() {
           >
             <div className="flex justify-center">
               <div className="p-4 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-500/30">
-                <Coffee className="w-10 h-10 text-purple-600" />
+                <Target className="w-10 h-10 text-purple-600" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-foreground">Tutku</h3>
+            <h3 className="text-xl font-semibold text-foreground">Azim</h3>
             <p className="text-muted-foreground">
-              Her proje bir kahve molası kadar değerli
+              Her zorluk bir öğrenme fırsatı
             </p>
           </div>
         </div>

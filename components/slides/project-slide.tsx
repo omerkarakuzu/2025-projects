@@ -1168,30 +1168,34 @@ export function ProjectSlide({ project }: ProjectSlideProps) {
 
       {/* Image Modal */}
       {isImageModalOpen && (
-        <div
-          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
-          onClick={() => setIsImageModalOpen(false)}
-        >
+        <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
           <div
             className="relative w-full h-full flex items-center justify-center p-8"
-            onClick={(e) => e.stopPropagation()}
+            onClick={() => setIsImageModalOpen(false)}
           >
             <img
               src={project.images[modalImageIndex] || "/placeholder.svg"}
               alt={`${project.title} - Görsel ${modalImageIndex + 1}`}
               className="max-w-full max-h-full w-auto h-auto object-contain"
+              onClick={(e) => e.stopPropagation()}
             />
 
             {project.images.length > 1 && (
               <>
                 <button
-                  onClick={prevModalImage}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevModalImage();
+                  }}
                   className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all z-40 shadow-xl"
                 >
                   <ChevronLeft className="w-7 h-7 text-white" />
                 </button>
                 <button
-                  onClick={nextModalImage}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextModalImage();
+                  }}
                   className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all z-40 shadow-xl"
                 >
                   <ChevronRight className="w-7 h-7 text-white" />
@@ -1204,7 +1208,10 @@ export function ProjectSlide({ project }: ProjectSlideProps) {
                 {project.images.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setModalImageIndex(index)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalImageIndex(index);
+                    }}
                     className={`h-2.5 rounded-full transition-all ${
                       index === modalImageIndex
                         ? "w-16 bg-white shadow-lg"
@@ -1215,7 +1222,7 @@ export function ProjectSlide({ project }: ProjectSlideProps) {
               </div>
             )}
 
-            <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm rounded-lg px-5 py-2.5 z-40 shadow-xl">
+            <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm rounded-lg px-5 py-2.5 z-40 shadow-xl" onClick={(e) => e.stopPropagation()}>
               <span className="text-white text-base font-medium">
                 {modalImageIndex + 1} / {project.images.length}
               </span>

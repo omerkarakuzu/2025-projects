@@ -1222,7 +1222,10 @@ export function ProjectSlide({ project }: ProjectSlideProps) {
               </div>
             )}
 
-            <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm rounded-lg px-5 py-2.5 z-40 shadow-xl" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm rounded-lg px-5 py-2.5 z-40 shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
               <span className="text-white text-base font-medium">
                 {modalImageIndex + 1} / {project.images.length}
               </span>

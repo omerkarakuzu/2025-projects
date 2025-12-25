@@ -473,7 +473,7 @@ const projects = [
       "Personel talepleri, izin başvuruları, onay süreçleri ve iş akışlarını dijital ortamda yöneten BPM platformu.",
     images: ["/3d-visualization.jpg"],
     technologies: ["Javascript", "Node.js", "MSSQL"],
-    link: "https://github.com/example/bpm-platform",
+    link: "http://127.0.0.1:5500",
     status: "pilot" as const,
     highlights: [
       "Dinamik iş akışı tasarımı",

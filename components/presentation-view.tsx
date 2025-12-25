@@ -574,7 +574,7 @@ const projects = [
     },
     stats: {
       duration: "2 Ay",
-      impact: "8.4K+ Sayım Kaydı",
+      impact: "7.5K+ Sayım Kaydı",
     },
   },
   {
